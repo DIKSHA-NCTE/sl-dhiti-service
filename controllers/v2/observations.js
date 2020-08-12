@@ -480,7 +480,9 @@ async function instancePdfReport(req, res) {
 
       if (("observationName" in instaRes) == true) {
         let resData = await pdfHandler.instanceObservationPdfGeneration(instaRes, true);
-
+        let hostname = req.headers.host;
+        resData.pdfUrl = "https://" + hostname + config.application_base_url + "v1/observations/pdfReportsUrl?id=" + resData.pdfUrl
+        resolve(resData);
         if (dataReportIndexes) {
           var reqOptions = {
             query: dataReportIndexes.id,
