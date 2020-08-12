@@ -26,7 +26,7 @@ exports.entitySolutionReport = async function (req, res) {
 async function entitySolutionReportGeneration(req, res) {
   
     return new Promise(async function (resolve, reject) {
-  
+      
       if (!req.body.entityId && !req.body.entityType && !req.body.solutionId) {
         let response = {
           result: false,

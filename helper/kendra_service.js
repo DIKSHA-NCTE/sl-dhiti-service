@@ -13,7 +13,7 @@ async function getDownloadableUrl(evidenceList, token) {
           "x-authenticated-user-token": token,
           "Content-Type": "application/json",
         },
-        body: { "filePaths": evidenceList, bucketName: config.evidence.gcp_bucket_name },
+        body: { "filePaths": evidenceList, containerName: config.evidence.gcp_bucket_name },
         uri: config.kendra.getDownloadableUrl_api
       }
   
