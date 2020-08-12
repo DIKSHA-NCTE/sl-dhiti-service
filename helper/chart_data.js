@@ -1806,7 +1806,7 @@ async function insertEvidenceArrayToChartObject (chartData,downloadableUrls,ques
 
         if(ele["instanceQuestions"] && ele.instanceQuestions.length > 0){
 
-            await Promise.all(chartData.response.instanceQuestions.map(async value => {
+            await Promise.all(ele.instanceQuestions.map(async value => {
 
                 let filteredData = questionData.filter(data => value.order.includes(data.questionExternalId));
 
