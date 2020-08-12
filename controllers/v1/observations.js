@@ -169,7 +169,7 @@ async function instancePdfReport(req, res) {
         var instaRes = await instanceObservationData(req, res);
   
         if (("observationName" in instaRes) == true) {
-          let resData = await pdfHandler.instanceObservationPdfGeneration(instaRes);
+          let resData = await pdfHandler.instanceObservationPdfGeneration(instaRes, true);
   
           if (dataReportIndexes) {
             let reqOptions = {

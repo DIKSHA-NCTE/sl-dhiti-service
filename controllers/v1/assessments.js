@@ -679,7 +679,7 @@ exports.pdfReports = async function (req, res) {
 
             if (assessmentRes.result == true) {
 
-                let resData = await pdfHandler.assessmentPdfGeneration(assessmentRes);
+                let resData = await pdfHandler.assessmentPdfGeneration(assessmentRes, true);
 
                 if (dataReportIndexes) {
                     var reqOptions = {
