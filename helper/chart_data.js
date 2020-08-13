@@ -1684,10 +1684,11 @@ exports.evidenceChartObjectCreation = async function(chartData, evidenceData, to
         let filteredData = evidenceData.filter(data => element.order.includes(data.event.questionExternalId));
    
         if(filteredData.length > 0) {
-        let result = await evidenceArrayCreation(element.order, evidenceData);
-    
-        filesArray.push(result[0]);
-        questionData.push(result[1]);
+            let result = await evidenceArrayCreation(element.order, evidenceData);
+        
+            filesArray.push(result[0]);
+            questionData.push(result[1]);
+        }
         
         if(element["instanceQuestions"] && element.instanceQuestions.length > 0){
           
@@ -1707,7 +1708,6 @@ exports.evidenceChartObjectCreation = async function(chartData, evidenceData, to
 
         }
 
-      }
 
     }));
 
